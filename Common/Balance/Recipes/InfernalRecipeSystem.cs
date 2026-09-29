@@ -34,6 +34,7 @@ using SOTS;
 using System.Linq;
 using Terraria.Localization;
 using ThoriumMod.Items.ArcaneArmor;
+using ThoriumMod.Items.MeleeItems;
 using ThoriumMod.Items.Misc;
 using ThoriumMod.Items.Placeable;
 using ThoriumMod.Tiles;
@@ -41,6 +42,8 @@ using Verdant;
 using Verdant.Items.Verdant.Armour;
 using Verdant.Items.Verdant.Armour.ApotheoticArmor;
 using Verdant.Items.Verdant.Blocks.Aquamarine;
+using Verdant.Items.Verdant.Weapons;
+using Verdant.Items.Verdant.Tools;
 
 namespace InfernalEclipseAPI.Common.Balance.Recipes
 {
@@ -316,8 +319,43 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
                 deconvaquaore.AddCondition(Condition.InGraveyard);
                 deconvaquaore.Register();
 
-                //Aquamarine equipment from verdant/thorium to verdant/thorium will be placed here
-                }
+                //Aquamarine equipment from verdant/thorium to verdant/thorium will be placed here (Aquamarine phasesaber conv first)
+                Recipe aquaphaseconv = Recipe.Create(ModContent.Find<ModItem>("Verdant", "AquamarinePhasesaber").Type);
+                aquaphaseconv.AddIngredient(thorium.Find<ModItem>("CyanPhasesaber"));
+                aquaphaseconv.AddTile(TileID.Anvils);
+                aquaphaseconv.AddCondition(Condition.InGraveyard);
+                aquaphaseconv.Register();
+                //aquamarine phaseblade conversion
+                Recipe aquaphaseblconv = Recipe.Create(ModContent.Find<ModItem>("Verdant", "AquamarinePhaseblade").Type);
+                aquaphaseblconv.AddIngredient(thorium.Find<ModItem>("CyanPhaseblase"));
+                aquaphaseblconv.AddTile(TileID.Anvils);
+                aquaphaseblconv.AddCondition(Condition.InGraveyard);
+                aquaphaseblconv.Register();
+                //Aquamarine hook conversion
+                Recipe aquahookconv = Recipe.Create(ModContent.Find<ModItem>("Verdant", "AquamarineHook").Type);
+                aquahookconv.AddIngredient(thorium.Find<ModItem>("AquamarineHook"));
+                aquahookconv.AddTile(TileID.Anvils);
+                aquahookconv.AddCondition(Condition.InGraveyard);
+                aquahookconv.Register();
+                //And now, aquamarine deconversion, starting with the hook
+                Recipe aquahookdeconv = Recipe.Create(ModContent.ItemType<AquamarineHook>(), 1);
+                aquahookdeconv.AddIngredient(ModContent.Find<ModItem>("Verdant", "AquamarineHook").Type);
+                aquahookdeconv.AddTile(TileID.Anvils);
+                aquahookdeconv.AddCondition(Condition.InGraveyard);
+                aquahookdeconv.Register();
+                //And now for the phasesaber
+                Recipe aquaphasedeconv = Recipe.Create(ModContent.ItemType<CyanPhasesaber>(), 1);
+                aquaphasedeconv.AddIngredient(ModContent.Find<ModItem>("Verdant", "AquamarinePhasesaber").Type);
+                aquaphasedeconv.AddTile(TileID.Anvils);
+                aquaphasedeconv.AddCondition(Condition.InGraveyard);
+                aquaphasedeconv.Register();
+                //And finally, for the phaseblade
+                Recipe aquabladedeconv = Recipe.Create(ModContent.ItemType<CyanPhaseblade>(), 1);
+                aquabladedeconv.AddIngredient(ModContent.Find<ModItem>("Verdant", "AquamarinePhaseblade").Type);
+                aquabladedeconv.AddTile(TileID.Anvils);
+                aquabladedeconv.AddCondition(Condition.InGraveyard);
+                aquabladedeconv.Register();
+            }
             #endregion
 
 
@@ -448,6 +486,10 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
                     //Add 4 stardust fragments to apoth armor
                     recipe.AddIngredient(ItemID.FragmentStardust, 4);
                 }
+                    if (recipe.HasResult(ModContent.Find<ModItem>("Verdant", "AquamarineStaff").Type) || recipe.HasResult(ModContent.Find<ModItem>("Verdant", "AquamarinePlatinumStaff").Type))
+                    {
+                        recipe.AddIngredient<SeaRemains>(1);
+                    }
                 }
                 //no? do nothing
                 #endregion
