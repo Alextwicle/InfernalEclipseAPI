@@ -17,7 +17,7 @@ namespace InfernalEclipseAPI.Common.Balance.moddedworldgen.verdant
             {
                 for (int i = 0; GenVars.orePatchX.Length > 0; i++)
                 {
-                    if (GenVars.orePatchX[i] == Verdant.Find<ModTile>("EmbeddedAquamarine").Type)
+                    if (GenVars.orePatchX[i] == Verdant.Find<ModTile>("EmbeddedStoneAquamarine").Type)
                     {
                         WorldGen.PlaceTile(i,i, Thorium.Find<ModTile>("AquamarineStoneBlock").Type);
                     }
