@@ -1,71 +1,71 @@
 AquamarineItem: {
-	DisplayName: Veridian Aquamarine
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine
+	// Tooltip: ""
 }
 
 EmbeddedAquamarineItem: {
-	DisplayName: Veridian Aquamarine Lush Soil Block
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Lush Soil Block
+	// Tooltip: ""
 }
 
 AquamarineTorchItem: {
-	DisplayName: Veridian Aquamarine Torch
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Torch
+	// Tooltip: ""
 }
 
 EmbeddedStoneAquamarineItem: {
-	DisplayName: Veridian Aquamarine Stone Block
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Stone Block
+	// Tooltip: ""
 }
 
 GemsparkAquamarineItem: {
-	DisplayName: Veridian Aquamarine Gemspark
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Gemspark
+	// Tooltip: ""
 }
 
 GemsparkAquamarineWallItem: {
-	DisplayName: Veridian Aquamarine Gemspark Wall
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Gemspark Wall
+	// Tooltip: ""
 }
 
 GemsparkAquamarineWallOfflineItem: {
-	DisplayName: Veridian Aquamarine Gemspark Wall (Offline)
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Gemspark Wall (Offline)
+	// Tooltip: ""
 }
 
 AquamarineHook: {
-	DisplayName: Veridian Aquamarine Hook
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Hook
+	// Tooltip: ""
 }
 
 AquamarinePhaseblade: {
-	DisplayName: Veridian Aquamarine Phaseblade
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Phaseblade
+	// Tooltip: ""
 }
 
 AquamarinePhasesaber: {
-	DisplayName: Veridian Aquamarine Phasesaber
-	Tooltip: ""
+	// DisplayName: Veridian Aquamarine Phasesaber
+	// Tooltip: ""
 }
 
 AquamarinePlatinumStaff: {
-	DisplayName: Veridian Staff (Platinum)
-	Tooltip:
+	// DisplayName: Veridian Staff (Platinum)
+	/* Tooltip:
 		'''
 		Summons bolts to come from your minions
 		The bolts get some added damage from your minions
 		- After much experimentation, a more commonplace version of
 		the experimental fusion array was able to be produced
-		'''
+		''' */
 }
 
 AquamarineStaff: {
-	DisplayName: Veridian Staff (Gold)
-	Tooltip:
+	// DisplayName: Veridian Staff (Gold)
+	/* Tooltip:
 		'''
 		Summons bolts to come from your minions
 		The bolts get some added damage from your minions
 		- After much experimentation, a more commonplace version of
 		the experimental fusion array was able to be produced
-		'''
+		''' */
 }
