@@ -257,7 +257,6 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
 #endregion
 
                 #region Verdant
-                //This section of code has been contributed by Alextricle, Github: Alextwicle
                 if (ModLoader.TryGetMod("Verdant", out Mod Verdant))
                 {
                     //aquamarine tile conversion recipes are created here, this one turns thorium aquamarine into verdant aquamarine
@@ -359,7 +358,6 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
                     aquabladedeconv.Register();
                 }
             }
-            //End of section of code by Alextricle
             #endregion
 
 
@@ -472,7 +470,6 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
             foreach (var recipe in Main.recipe)
             {
                 #region Verdant
-                //This section of code has been contributed by Alextricle, Github: Alextwicle
                 //do we have verdant
                 if (ModLoader.TryGetMod("Verdant", out Mod Verdant))
                 {
@@ -497,7 +494,6 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
                     }
                 }
                 //no? do nothing
-                //End of section of code contributed by Alextricle
                 #endregion
 
                 #region tPackBuilder Subsititons
