@@ -254,7 +254,7 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
                     }
                 }
 
-            #endregion
+#endregion
 
                 #region Verdant
                 if (ModLoader.TryGetMod("Verdant", out Mod Verdant))
@@ -321,41 +321,41 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
                     //deconvaquaore.Register();
 
                     //Aquamarine equipment from verdant/thorium to verdant/thorium will be placed here (Aquamarine phasesaber conv first)
-                    //Recipe aquaphaseconv = Recipe.Create(ModContent.Find<ModItem>("Verdant", "AquamarinePhasesaber").Type);
-                    //aquaphaseconv.AddIngredient(thorium.Find<ModItem>("CyanPhasesaber"));
-                    //aquaphaseconv.AddTile(TileID.Anvils);
-                    //aquaphaseconv.AddCondition(Condition.InGraveyard);
-                    //aquaphaseconv.Register();
+                    Recipe aquaphaseconv = Recipe.Create(Verdant.Find<ModItem>("AquamarinePhasesaber").Type,1);
+                    aquaphaseconv.AddIngredient(thorium.Find<ModItem>("CyanPhasesaber"));
+                    aquaphaseconv.AddTile(TileID.Anvils);
+                    aquaphaseconv.AddCondition(Condition.InGraveyard);
+                    aquaphaseconv.Register();
                     //aquamarine phaseblade conversion
-                    //Recipe aquaphaseblconv = Recipe.Create(ModContent.Find<ModItem>("Verdant", "AquamarinePhaseblade").Type);
-                    //aquaphaseblconv.AddIngredient(thorium.Find<ModItem>("CyanPhaseblase"));
-                    //aquaphaseblconv.AddTile(TileID.Anvils);
-                    //aquaphaseblconv.AddCondition(Condition.InGraveyard);
-                    //aquaphaseblconv.Register();
+                    Recipe aquaphaseblconv = Recipe.Create(Verdant.Find<ModItem>("AquamarinePhaseblade").Type,1);
+                    aquaphaseblconv.AddIngredient(thorium.Find<ModItem>("CyanPhaseblase"));
+                    aquaphaseblconv.AddTile(TileID.Anvils);
+                    aquaphaseblconv.AddCondition(Condition.InGraveyard);
+                    aquaphaseblconv.Register();
                     //Aquamarine hook conversion
-                    //Recipe aquahookconv = Recipe.Create(ModContent.Find<ModItem>("Verdant", "AquamarineHook").Type);
-                    //aquahookconv.AddIngredient(thorium.Find<ModItem>("AquamarineHook"));
-                    //aquahookconv.AddTile(TileID.Anvils);
-                    //aquahookconv.AddCondition(Condition.InGraveyard);
-                    //aquahookconv.Register();
+                    Recipe aquahookconv = Recipe.Create(Verdant.Find<ModItem>("AquamarineHook").Type,1);
+                    aquahookconv.AddIngredient(thorium.Find<ModItem>("AquamarineHook"));
+                    aquahookconv.AddTile(TileID.Anvils);
+                    aquahookconv.AddCondition(Condition.InGraveyard);
+                    aquahookconv.Register();
                     //And now, aquamarine deconversion, starting with the hook
-                    //Recipe aquahookdeconv = Recipe.Create(ModContent.ItemType<AquamarineHook>(), 1);
-                    //aquahookdeconv.AddIngredient(ModContent.Find<ModItem>("Verdant", "AquamarineHook").Type);
-                    //aquahookdeconv.AddTile(TileID.Anvils);
-                    //aquahookdeconv.AddCondition(Condition.InGraveyard);
-                    //aquahookdeconv.Register();
+                    Recipe aquahookdeconv = Recipe.Create(thorium.Find<ModItem>("AquamarineHook").Type,1);
+                    aquahookdeconv.AddIngredient(Verdant.Find<ModItem>("AquamarineHook"));
+                    aquahookdeconv.AddTile(TileID.Anvils);
+                    aquahookdeconv.AddCondition(Condition.InGraveyard);
+                    aquahookdeconv.Register();
                     //And now for the phasesaber
-                    //Recipe aquaphasedeconv = Recipe.Create(ModContent.ItemType<CyanPhasesaber>(), 1);
-                    //aquaphasedeconv.AddIngredient(ModContent.Find<ModItem>("Verdant", "AquamarinePhasesaber").Type);
-                    //aquaphasedeconv.AddTile(TileID.Anvils);
-                    //aquaphasedeconv.AddCondition(Condition.InGraveyard);
-                    //aquaphasedeconv.Register();
+                    Recipe aquaphasedeconv = Recipe.Create(thorium.Find<ModItem>("CyanPhasesaber").Type,1);
+                    aquaphasedeconv.AddIngredient(Verdant.Find<ModItem>("AquamarinePhasesaber"));
+                    aquaphasedeconv.AddTile(TileID.Anvils);
+                    aquaphasedeconv.AddCondition(Condition.InGraveyard);
+                    aquaphasedeconv.Register();
                     //And finally, for the phaseblade
-                    //Recipe aquabladedeconv = Recipe.Create(ModContent.ItemType<CyanPhaseblade>(), 1);
-                    //aquabladedeconv.AddIngredient(ModContent.Find<ModItem>("Verdant", "AquamarinePhaseblade").Type);
-                    //aquabladedeconv.AddTile(TileID.Anvils);
-                    //aquabladedeconv.AddCondition(Condition.InGraveyard);
-                    //aquabladedeconv.Register();
+                    Recipe aquabladedeconv = Recipe.Create(thorium.Find<ModItem>("CyanPhaseblade").Type,1);
+                    aquabladedeconv.AddIngredient(Verdant.Find<ModItem>("AquamarinePhaseblade"));
+                    aquabladedeconv.AddTile(TileID.Anvils);
+                    aquabladedeconv.AddCondition(Condition.InGraveyard);
+                    aquabladedeconv.Register();
                 }
             }
             #endregion
@@ -488,10 +488,10 @@ namespace InfernalEclipseAPI.Common.Balance.Recipes
                     //Add 4 stardust fragments to apoth armor
                     recipe.AddIngredient(ItemID.FragmentStardust, 4);
                 }
-                    //if (recipe.HasResult(ModContent.Find<ModItem>("Verdant", "AquamarineStaff").Type) || recipe.HasResult(ModContent.Find<ModItem>("Verdant", "AquamarinePlatinumStaff").Type))
-                    //{
-                      //  recipe.AddIngredient<SeaRemains>(1);
-                    //}
+                    if (recipe.HasResult(Verdant.Find<ModItem>("AquamarineStaff").Type) || recipe.HasResult(Verdant.Find<ModItem>("AquamarinePlatinumStaff")))
+                    {
+                        recipe.AddIngredient<SeaRemains>(1);
+                    }
                 }
                 //no? do nothing
                 #endregion
